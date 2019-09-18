@@ -1,0 +1,41 @@
+.module79 {
+  width: 100%;
+  height: 73%;
+  background: url(../images/imagebox3.jpg);
+  background-position: 0px -250px !important;
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.module79 h1 {
+  color: white;
+  font-size: 80px;
+}
+.module79 p {
+  color: white;
+  font-size: 16px;
+}
+.module79 .divider-inner {
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+.module79 .line-left {
+  right: 100%;
+  margin-right: 10px;
+}
+.module79 .divider-line {
+  position: absolute;
+  top: 50%;
+  border-top: 1px solid;
+  width: 90px;
+}
+.module79 .line-right {
+  left: 100%;
+  margin-left: 10px;
+}
+.module79 .banner {
+  padding: 150px 0;
+}
