@@ -1,8 +1,3 @@
-@media only screen and (max-width: 767px) {
-  .module83 {
-    margin: -6px -3px 0;
-  }
-}
 .module83 {
   display: flex;
   align-items: center;
@@ -11,21 +6,9 @@
 }
 .module83 img {
   margin-top: 20px;
-  width: 107.5%;
+  width: 274.125px;
   height: 323px;
   transform: translate(-9px);
-}
-.module83 .image:hover .image {
-  opacity: 0.4;
-}
-.module83 .images:hover .image {
-  opacity: 0.4;
-}
-.module83 .imaged:hover .image {
-  opacity: 0.4;
-}
-.module83 .imagef:hover .image {
-  opacity: 0.4;
 }
 .module83 html,
 .module83 body {

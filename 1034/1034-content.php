@@ -1,14 +1,16 @@
+<?php
+$url_host = 'http://' . $_SERVER['HTTP_HOST'];
+$pattern_document_root = addcslashes(realpath($_SERVER['DOCUMENT_ROOT']), '\\');
+$pattern_uri = '/' . $pattern_document_root . '(.*)$/';
+
+preg_match_all($pattern_uri, __DIR__, $matches);
+$url_path = $url_host . $matches[1][0];
+$url_path = str_replace('\\', '/', $url_path);
+?> 
 <html>
     <head>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <link href = "css/swiper.min.css" rel = "stylesheet" type="text/css">
-        <script src="js/swiper.js" type="text/javascript"></script>
+        
         <?php
         if (!class_exists('lessc')) {
             include ('./libs/lessc.inc.php');
@@ -61,7 +63,7 @@
         $less = new lessc;
         $less->compileFile('less/module83.less', 'css/module83.css');
         ?>
-        <link href="css/module83.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $url_path ?>/css/module83.css" rel="stylesheet" type="text/css" />
 
         <?php
         if (!class_exists('lessc')) {
@@ -83,6 +85,7 @@
 
 
         <script>
+
             jQuery(document).ready(function ($) {
 
                 var TopFixMenu = $(".header");
@@ -165,14 +168,20 @@
                             <ul class="nav navbar-nav navbar-left">
                                 <li class="active dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Header Center</a></li>
+                                        <li><a href="#">Header Dark</a></li>
+                                    </ul>
                                 </li>
-                                <li><a href="http://localhost/29-cdptw1-2/1035/1035.php">About</a></li>
-                                <link> 
-                                <li><a href="#">Menu</a></li> 
-                                <li><a href="#">Reservation</a></li> 
+                              
                                 <li><a href="#">Blog</a></li> 
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Elements</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Typography</a></li>
+                                        <li><a href="#">Elements 1</a></li>
+                                        <li><a href="#">Elements 2</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="#">Contact</a></li> 
 
@@ -188,8 +197,8 @@
                                                 <p>Table</p>
                                             </a>
                                         </div>
-                                    </ul>			
-                                </div>						
+                                    </ul>           
+                                </div>                      
                             </ul>
 
                         </div>
@@ -219,6 +228,7 @@
         <div class="module80">
             <div class="container">
                 <div class="row">
+                <div class="detail">
                     <div class="col-md-3">
                         <div class="gd1">
                             <h1>HISTORY</h1>
@@ -233,22 +243,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "imageg">
-                    <div class="col-md-3">
-                    <div class="swiper-slide"><img src="images/Stocksy_txpcd1dc0eemKP100_Medium_1204406-683x1024.jpg" alt="" class = "image"/></div>
-                        
-                    </div>
-        </div>
-                    <div class = "imageh">
-                    <div class="col-md-3">
-                    <div class="swiper-slide"> <img src="images/Stocksy_txpcd1dc0eemKP100_Medium_1000349-683x1024.jpg" alt="" class = "image"/></div>
-                                           
-                   
-                  
-                  </div>
 
-            </div>
+                    
+
+             <!-- Swiper -->
+                <div class="col-md-6">
+                <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">  <img src="images/h5.jpg" alt=""></div>  
+                              <div class="swiper-slide">  <img src="images/h4.jpg" alt="" ></div>
+                                
+                            </div>
+                            <!-- Add Pagination -->
+                            <br>
+                            <br>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            </div>
+                      </div> 
+
+ 
         </div>    
+        </div>
         </div>
         </div>      
         <div class="module81">
@@ -279,39 +296,33 @@
         </div>
         <div class="module83">
         <div class="container">
-            <div class="image">
+        <div class="row">
+            <div class="detail">
+             <!-- Swiper -->
+                <div class="col-md-12">
+                <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">  <img src="images/h1.jpg" alt="" ></div>  
+                                <div class="swiper-slide">  <img src="images/h2.jpg" alt="" ></div>
+                                <div class="swiper-slide">< <img src="images/h4.jpg" alt="" ></div>         
+                                 <div class="swiper-slide"><img src="images/h3.jpg" alt="" ></div> 
+                            </div>
+                            <!-- Add Pagination -->
+                            <br>
+                            <br>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            </div>
+                      </div> 
+    </div>
+    </div>
+</div>
 
-                <div class="col-md-3">
-                <div class="swiper-slide"> <a href=""><img src="images/ready-1024x682.jpg" alt="" class = "image"></a></div>
- 
-                </div>
-             </div>
-             <div class = "images">    
-                <div class="col-md-3">
-                <div class="swiper-slide">  <a href=""> <img src="images/Stocksy_txpcd1dc0eemKP100_Medium_695556-1024x682.jpg" alt="" class = "image"></a></div>
 
-                  
-                </div>
-             </div>
-             <div class = "imaged">   
-                <div class="col-md-3">
-                <div class="swiper-slide"><a href=""> <img src="images/Stocksy_txpcd1dc0eemKP100_Medium_1000349-683x1024.jpg" alt="" class = "image"></a></div>
-
-                    
-                </div>
-                </div>
-                <div class = "imagef">      
-                <div class="col-md-3">
-                <div class="swiper-slide"><a href=""><img src="images/Stocksy_txpcd1dc0eemKP100_Medium_1313602-683x1024.jpg" alt="" class = "image"></a></div>
-
-            
-              
-            </div>
-            <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+        
         </div>
-        </div>
-        </div>
+
         <div class="module84">
             <div class="container">
                 <div class="row">
